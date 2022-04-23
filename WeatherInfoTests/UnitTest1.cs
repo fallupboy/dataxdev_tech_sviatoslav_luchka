@@ -33,7 +33,7 @@ namespace WeatherInfoTests
             IEventTimeRepository repo = new EventTimeRepository();
             City city = new City() { Id = 99, Name = "Kharkiv", Latitude = 49.993500, Longitude = 36.230385 };
             Event ev = new Event();
-            ev.Results = new Result() { Sunrise = "2:29:32 AM", Sunset = "4:39:31 PM" };
+            ev.Results = new Result() { Sunrise = "2:27:40 AM", Sunset = "4:41:01 PM" };
 
             // Act
             var result = repo.GetSunInfoAsync(city.Latitude, city.Longitude).Result;
