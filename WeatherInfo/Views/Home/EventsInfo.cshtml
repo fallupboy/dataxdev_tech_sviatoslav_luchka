@@ -1,0 +1,61 @@
+﻿@model WeatherInfo.Models.Event
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Events Info</h2>
+
+<div>
+    <h4>@ViewBag.CityName</h4>
+    <hr />
+    <dl>
+        @if (ViewBag.EventType == "sr")
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.Results.Sunrise)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Results.Sunrise) UTC
+
+            </dd>
+        }
+        else if (ViewBag.EventType == "ss")
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.Results.Sunset)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Results.Sunset) UTC
+
+            </dd>
+        }
+        else
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.Results.Sunrise)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Results.Sunrise) UTC
+
+            </dd>
+
+            <br />
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Results.Sunset)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Results.Sunset) UTC
+
+            </dd>
+        }
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
